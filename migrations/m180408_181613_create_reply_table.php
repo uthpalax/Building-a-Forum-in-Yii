@@ -17,8 +17,8 @@ class m180408_181613_create_reply_table extends Migration
             'thread_id' => $this->integer()->notNull(), 
             'user_id' => $this->integer()->notNull(),
             'body' => $this->text(),
-            'create_at' => $this->timestamp()->defaultValue(null),
-            'update_at' => $this->timestamp()->defaultValue(null)
+            'created_at' => $this->timestamp()->defaultValue(null),
+            'updated_at' => $this->timestamp()->defaultValue(null)
         ]);
 
         // create index for user_id column

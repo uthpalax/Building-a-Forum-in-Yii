@@ -17,8 +17,8 @@ class m180408_181605_create_thread_table extends Migration
             'user_id' => $this->integer()->notNull(),
             'title' => $this->string()->notNull(), 
             'body' => $this->text(), 
-            'create_at' => $this->timestamp()->defaultValue(null),
-            'update_at' => $this->timestamp()->defaultValue(null)
+            'created_at' => $this->timestamp()->defaultValue(null),
+            'updated_at' => $this->timestamp()->defaultValue(null)
         ]);
 
         // create index for user_id column

@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="thread-index">
 
-    <h2><?= Html::encode($this->title) ?></h2>
+    <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
@@ -29,8 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'user_id',
             'title',
             'body:ntext',
-            'create_at',
-            //'update_at',
+            'created_at',
+            //'updated_at',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

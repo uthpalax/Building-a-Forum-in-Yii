@@ -11,8 +11,8 @@ use Yii;
  * @property int $user_id
  * @property string $title
  * @property string $body
- * @property string $create_at
- * @property string $update_at
+ * @property string $created_at
+ * @property string $updated_at
  *
  * @property User $user
  */
@@ -35,7 +35,7 @@ class Thread extends \yii\db\ActiveRecord
             [['user_id', 'title'], 'required'],
             [['user_id'], 'integer'],
             [['body'], 'string'],
-            [['create_at', 'update_at'], 'safe'],
+            [['created_at', 'updated_at'], 'safe'],
             [['title'], 'string', 'max' => 255],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
         ];
@@ -51,8 +51,8 @@ class Thread extends \yii\db\ActiveRecord
             'user_id' => 'User ID',
             'title' => 'Title',
             'body' => 'Body',
-            'create_at' => 'Create At',
-            'update_at' => 'Update At',
+            'created_at' => 'Created At',
+            'updated_at' => 'Updated At',
         ];
     }
 

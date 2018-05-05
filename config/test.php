@@ -24,9 +24,9 @@ return [
         'urlManager' => [
             'showScriptName' => true,
         ],
-        'user' => [
-            'identityClass' => 'app\models\User',
-        ],
+        // 'user' => [
+        //     'identityClass' => 'app\models\User',
+        // ],
         'request' => [
             'cookieValidationKey' => 'test',
             'enableCsrfValidation' => false,
@@ -36,6 +36,14 @@ return [
                 'domain' => 'localhost',
             ],
             */
+        ],
+    ],
+    'modules' => [
+        'user' => [
+            'class' => 'dektrium\user\Module',
+            'modelMap' => [
+                'User' => 'app\models\User',
+            ],
         ],
     ],
     'params' => $params,

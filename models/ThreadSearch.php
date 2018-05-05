@@ -19,7 +19,7 @@ class ThreadSearch extends Thread
     {
         return [
             [['id', 'user_id'], 'integer'],
-            [['title', 'body', 'create_at', 'update_at'], 'safe'],
+            [['title', 'body', 'created_at', 'updated_at'], 'safe'],
         ];
     }
 
@@ -61,8 +61,8 @@ class ThreadSearch extends Thread
         $query->andFilterWhere([
             'id' => $this->id,
             'user_id' => $this->user_id,
-            'create_at' => $this->create_at,
-            'update_at' => $this->update_at,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])
